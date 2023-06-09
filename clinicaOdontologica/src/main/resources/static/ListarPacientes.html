@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Listado de pacientes</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="./js/getPatient.js"></script>
+  <script type="text/javascript" src="./js/putPatient.js"></script>
+  <script type="text/javascript" src="./js/deletePatient.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="./index.html">Clínica Odontológica</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+  </div>
+</nav>
+<div>
+  <h1> Pacientes </h1>
+  <div>
+    <table class="table" id="tablaPacientes">
+      <thead class="thead-dark">
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>DNI</th>
+        <th>Eliminar</th>
+      </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-7 container-md" style="display: none" id="updatingFormPaciente">
+    <h3> Modificar paciente </h3>
+    <form id="updateFormPaciente">
+      <div class="form-group">
+        <label class="control-label">ID:</label>
+        <input type="text" class="form-control" id="formId" placeholder="Ingrese el nombre" readonly>
+      </div>
+      <div class="form-group">
+        <label class="control-label">Nombre:</label>
+        <input type="text" class="form-control" id="formNombre" placeholder="Ingrese el nombre" required>
+      </div>
+      <div class="form-group">
+        <label class="control-label">Apellido:</label>
+        <input type="text" class="form-control" id="formApellido" placeholder="Ingrese el apellido" required>
+      </div>
+      <div class="form-group">
+        <label class="control-label">DNI:</label>
+        <input type="number" class="form-control" id="formDni" placeholder="Ingrese el DNI" required>
+      </div>
+      <button type="submit" class="btn btn-primary" id="btnAddPaciente">Modificar</button>
+    </form>
+  </div>
+</div>
+
+</body>
+</html>
